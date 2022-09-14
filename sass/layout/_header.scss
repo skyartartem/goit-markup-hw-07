@@ -1,0 +1,122 @@
+/* Стилізація капелюха */
+
+.header { 
+  border-bottom: 1px solid #ECECEC;
+  /* Нижній бордер */
+}
+
+
+
+.header {
+  display: block;
+}
+
+.header>.container {
+  /* border: 1px solid tomato; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation .logo.links {
+  margin-right: 93px;
+}
+
+
+.navigation {
+  display: flex;
+  align-items: center;  
+}
+
+.site-nav {
+ display: flex;
+}
+
+.site-nav .links {
+  position: relative;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--secondary-text-color);
+  transition: color var(--duration-cubic), text-shadow var(--duration-cubic);
+}
+
+.site-nav .links:hover,
+.site-nav .links:focus {
+  color: var(--accent-color);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.site-nav>.items:not(:last-child),
+.list>.items:not(:last-child) {
+   margin-right: 30px;
+}
+
+.header .current::after {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  bottom: 0%;
+} 
+
+.site-nav .links.current {
+  color: var(--accent-color);
+}
+
+
+/* Стилізація контактів в капелюсі */
+
+.contacts {
+  display: flex;
+}
+
+.letter {
+   fill: currentColor;
+   border-radius: 2px;
+ }
+
+.header-contact:hover .letter,
+.header-contact:focus .letter {
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+ .smartphone, .letter {
+  transition: box-shadow var(--duration-cubic);
+}
+
+.header-contact:hover .smartphone,
+.header-contact:focus .smartphone {
+  border-radius: 2px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.smartphone {
+ fill: currentColor;
+ border-radius: 2px;
+}
+
+
+.header-contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+  transition: color var(--duration-cubic), 
+    text-shadow var(--duration-cubic);
+  }
+
+.header-contact:hover,
+.header-contact:focus {
+  color: var(--accent-color);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}

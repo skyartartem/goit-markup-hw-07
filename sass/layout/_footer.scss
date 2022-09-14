@@ -1,0 +1,208 @@
+.footer {
+  background-color: var(--drk-bgrd-color);
+  padding: 60px 0;
+}
+
+.footer .container {
+  display: flex;
+  /* gap: 70px; */
+  align-items: baseline;
+}
+
+/* ===== стилізація адресного блоку ===== */
+
+.adrs .adrs-item:not(:last-child) {
+  margin-bottom: 9px;
+  /* border: 1px solid tomato; */
+}
+
+/* .adrs:hover,
+   .adrs:focus {
+  color: var(--accent-color);
+} */
+
+.mail {
+  /* display: inline-block; */
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color var(--duration-cubic);
+ }
+
+.mail:hover,
+.mail:focus {
+  color: var(--accent-color);
+}
+
+.tel {
+  /* display: inline-block; */
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color var(--duration-cubic);
+}
+
+.tel:hover,
+.tel:focus {
+  color: var(--accent-color);
+}
+
+
+.social-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-color-on-drk-bgrd);
+  margin-bottom: 20px;
+}
+
+.footer .social.list {
+    display: flex;
+    gap: 10px;
+}
+
+
+.footer .logo.links {
+  display: inline-block;
+  margin-bottom: 20px;
+  /* outline: 1px solid tomato; */
+}
+
+.links.adrs {
+  display: inline-block;
+  font-style: normal;
+  color: var(--text-color-on-drk-bgrd);
+}
+
+.footer .wrapper-adrs {
+  margin-right: 70px;
+}
+
+/* === Стилізація іконок соцмереж === */
+
+.footer .social-item .links {
+  display: flex;
+  height: 44px;
+  width: 44px;
+  background-color: rgba(68, 69, 78, 1);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  transition: background var(--duration-cubic);
+}
+
+.footer .social-item .links:hover,
+.footer .social-item .links:focus {
+  background-color: var(--accent-color);  
+}
+
+.footer .social-item .links.twitter:hover,
+.footer .social-item .links.twitter:focus {
+  background-color: rgb(29 155 240);  
+}
+
+.footer .social-item .links.instagram:hover,
+.footer .social-item .links.instagram:focus {
+  background-color: rgba(68, 69, 78, 0.0);  
+}
+
+.footer .social-item .links.facebook:hover,
+.footer .social-item .links.facebook:focus {
+  background-color: rgba(68, 69, 78, 0.0);  
+}
+
+.footer .social-item .links.youtube:hover,
+.footer .social-item .links.youtube:focus {
+  background-color: red;  
+}
+
+
+.footer .social-item .links.linkedin:hover,
+.footer .social-item .links.linkedin:focus {
+  background-color: #0a66c2;  
+}
+
+
+.instagram-wraper {
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+
+.facebook-wraper {
+  border-radius: 50%;
+  background-image:linear-gradient(to bottom, #19aefe, #0062e0);
+}
+
+
+.footer .wrapper-social .social-icon {
+  fill: var(--text-color-on-drk-bgrd);
+}
+/* ====== стилізація форми підписки ===== */
+
+.wrapper-signup-form {
+  margin-left: auto;
+}
+
+.label-name {
+  display:block;
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: calc(16/14);
+  text-transform: uppercase;
+  color: var(--text-color-on-drk-bgrd);
+}
+
+.user-email-input {
+  display: inline-block;
+  margin-right: 12px;
+  height: 50px;
+  width: 358px;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--text-color-on-drk-bgrd);
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.user-email-input:focus-within {
+  border: 1px solid var(--accent-color);
+  outline: none;
+}
+
+.user-email-input::placeholder {
+  font-family: inherit;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.icon-send {margin-left: 10px; }
+
+.btn-signup-form {
+  display: inline-flex;
+  border: none;
+  height: 50px;
+  width: 200px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30/16);
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.06em;
+  color:var(--text-color-on-drk-bgrd);
+  padding: 10px auto;
+  background: var(--accent-color);
+  border-radius: 4px; 
+  transition: opacity var(--duration-cubic), 
+    transform var(--duration-cubic), 
+    box-shadow var(--duration-cubic);
+}
+
+.btn-signup-form:hover,
+.btn-signup-form:focus {
+  opacity: 0.95;
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 5px rgba(125, 125, 125, 0.5);
+}
