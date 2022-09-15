@@ -60,7 +60,6 @@ button {
 }
 
 .section {
-  /* border: 1px solid tomato; */
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -68,12 +67,11 @@ button {
 .container {
   width: 1200px;
   margin: 0 auto;
-  /* border: 1px solid tomato; */
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.section .title {
+.title {
   color: var(--secondary-text-color);
   font-size: 36px;
   line-height: 1.167;
@@ -102,33 +100,40 @@ button {
 /* Стилізація капелюха */
 .header {
   border-bottom: 1px solid #ECECEC;
-  /* Нижній бордер */
 }
-
-.header {
+.header .current::after {
+  position: absolute;
   display: block;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  bottom: 0%;
 }
-
-.header > .container {
-  /* border: 1px solid tomato; */
+.header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.navigation .logo.links {
-  margin-right: 93px;
 }
 
 .navigation {
   display: flex;
   align-items: center;
 }
+.navigation .logo.links {
+  margin-right: 93px;
+}
 
 .site-nav {
   display: flex;
 }
-
+.site-nav .items:not(:last-child) {
+  margin-right: 30px;
+}
+.site-nav .links.current {
+  color: var(--accent-color);
+}
 .site-nav .links {
   position: relative;
   display: block;
@@ -140,61 +145,23 @@ button {
   color: var(--secondary-text-color);
   transition: color var(--duration-cubic), text-shadow var(--duration-cubic);
 }
-
-.site-nav .links:hover,
-.site-nav .links:focus {
+.site-nav .links:hover, .site-nav .links:focus {
   color: var(--accent-color);
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.site-nav > .items:not(:last-child),
-.list > .items:not(:last-child) {
-  margin-right: 30px;
-}
-
-.header .current::after {
-  position: absolute;
-  display: block;
-  content: "";
-  width: 100%;
-  height: 4px;
-  background-color: var(--accent-color);
-  border-radius: 2px;
-  bottom: 0%;
-}
-
-.site-nav .links.current {
-  color: var(--accent-color);
 }
 
 /* Стилізація контактів в капелюсі */
 .contacts {
   display: flex;
 }
+.contacts .items:not(:last-child) {
+  margin-right: 30px;
+}
 
+.smartphone,
 .letter {
   fill: currentColor;
-  border-radius: 2px;
-}
-
-.header-contact:hover .letter,
-.header-contact:focus .letter {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.smartphone, .letter {
   transition: box-shadow var(--duration-cubic);
-}
-
-.header-contact:hover .smartphone,
-.header-contact:focus .smartphone {
-  border-radius: 2px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.smartphone {
-  fill: currentColor;
-  border-radius: 2px;
 }
 
 .header-contact {
@@ -207,11 +174,16 @@ button {
   color: var(--primary-text-color);
   transition: color var(--duration-cubic), text-shadow var(--duration-cubic);
 }
-
-.header-contact:hover,
-.header-contact:focus {
+.header-contact:hover, .header-contact:focus {
   color: var(--accent-color);
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.header-contact:hover .smartphone, .header-contact:focus .smartphone {
+  border-radius: 2px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.header-contact:hover .letter, .header-contact:focus .letter {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .hero {
@@ -253,9 +225,7 @@ button {
   border-radius: 4px;
   transition: opacity var(--duration-cubic), transform var(--duration-cubic), box-shadow var(--duration-cubic);
 }
-
-.hero-button:hover,
-.hero-button:focus {
+.hero-button:hover, .hero-button:focus {
   opacity: 0.95;
   transform: translate(-1px, -1px);
   box-shadow: 4px 4px 4px rgba(255, 255, 255, 0.43);
@@ -264,12 +234,6 @@ button {
 .section.benefits {
   padding-bottom: 0px;
 }
-
-.list.benefits {
-  display: flex;
-  justify-content: space-between;
-}
-
 .section.benefits .title-item {
   color: var(--secondary-text-color);
   font-size: 1em;
@@ -278,13 +242,14 @@ button {
   margin-bottom: 10px;
 }
 
-.benefits-card {
-  width: calc((100% - 90px) / 4);
-  /* margin: 15px; */
-  /* border: 1px solid #2196f3; */
+.list.benefits {
+  display: flex;
+  justify-content: space-between;
 }
 
-/* Додаю іконки в розділ переваги */
+.benefits-card {
+  width: calc((100% - 90px) / 4);
+}
 .benefits-card::before {
   content: "";
   display: block;
@@ -296,18 +261,16 @@ button {
   background-position: center;
 }
 
+/* Додаю іконки в розділ переваги */
 .benefits-card.icon-antenna::before {
   background-image: url(../images/svg/antenna.svg);
 }
-
 .benefits-card.icon-clock::before {
   background-image: url(../images/svg/clock.svg);
 }
-
 .benefits-card.icon-diagram::before {
   background-image: url(../images/svg/diagram.svg);
 }
-
 .benefits-card.icon-astronaut::before {
   background-image: url(../images/svg/astronaut.svg);
 }
@@ -316,8 +279,7 @@ button {
   display: flex;
   justify-content: space-between;
 }
-
-.list.box > .photo {
+.list .photo {
   position: relative;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
@@ -353,7 +315,6 @@ button {
 }
 
 .position-box {
-  /* border: 1px solid tomato; */
   padding-bottom: 30px;
   padding-top: 30px;
 }
@@ -366,35 +327,15 @@ button {
   text-align: center;
   margin-bottom: 10px;
 }
-
 .section.team .position {
   font-size: 16px;
   line-height: 1.187;
   text-align: center;
   margin-bottom: 16px;
 }
-
 .section.team .social-item .social-icon {
   fill: currentColor;
 }
-
-.section.team .social-item .links {
-  transition: color var(--duration-cubic), background-color var(--duration-cubic);
-}
-
-.section.team .social-item .links:hover,
-.section.team .social-item .links:focus {
-  background-color: var(--accent-color);
-  color: var(--text-color-on-drk-bgrd);
-}
-
-.section.team .social.list {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  /* border: 1px solid tomato; */
-}
-
 .section.team .social-item .links {
   color: #afb1b8;
   display: flex;
@@ -403,6 +344,17 @@ button {
   border-radius: 50%;
   justify-content: center;
   align-items: center;
+  transition: color var(--duration-cubic), background-color var(--duration-cubic);
+}
+.section.team .social-item .links:hover, .section.team .social-item .links:focus {
+  background-color: var(--accent-color);
+  color: var(--text-color-on-drk-bgrd);
+}
+.section.team .social.list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  /* border: 1px solid tomato; */
 }
 
 .list.clients {
@@ -420,14 +372,9 @@ button {
   border: 1px solid #AFB1B8;
   border-radius: 4px;
   color: #AFB1B8;
-}
-
-.item-client a {
   transition: box-shadow var(--duration-cubic), border-color var(--duration-cubic), color var(--duration-cubic);
 }
-
-.item-client a:hover,
-.item-client a:focus {
+.item-client .links:hover, .item-client .links:focus {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-color: var(--accent-color);
   color: var(--accent-color);
@@ -441,32 +388,43 @@ button {
   background-color: var(--drk-bgrd-color);
   padding: 60px 0;
 }
-
 .footer .container {
   display: flex;
-  /* gap: 70px; */
   align-items: baseline;
+}
+.footer .social.list {
+  display: flex;
+  gap: 10px;
+}
+.footer .logo.links {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.footer .wrapper-adrs {
+  margin-right: 70px;
 }
 
 /* ===== стилізація адресного блоку ===== */
-.adrs .adrs-item:not(:last-child) {
+.adrs-item:not(:last-child) {
   margin-bottom: 9px;
-  /* border: 1px solid tomato; */
 }
 
-/* .adrs:hover,
-   .adrs:focus {
+.links.adrs {
+  display: inline-block;
+  font-style: normal;
+  color: var(--text-color-on-drk-bgrd);
+  transition: color var(--duration-cubic);
+}
+.links.adrs:hover, .links.adrs:focus {
   color: var(--accent-color);
-} */
+}
+
 .mail {
-  /* display: inline-block; */
   font-style: normal;
   color: rgba(255, 255, 255, 0.6);
   transition: color var(--duration-cubic);
 }
-
-.mail:hover,
-.mail:focus {
+.mail:hover, .mail:focus {
   color: var(--accent-color);
 }
 
@@ -476,9 +434,7 @@ button {
   color: rgba(255, 255, 255, 0.6);
   transition: color var(--duration-cubic);
 }
-
-.tel:hover,
-.tel:focus {
+.tel:hover, .tel:focus {
   color: var(--accent-color);
 }
 
@@ -492,27 +448,6 @@ button {
   margin-bottom: 20px;
 }
 
-.footer .social.list {
-  display: flex;
-  gap: 10px;
-}
-
-.footer .logo.links {
-  display: inline-block;
-  margin-bottom: 20px;
-  /* outline: 1px solid tomato; */
-}
-
-.links.adrs {
-  display: inline-block;
-  font-style: normal;
-  color: var(--text-color-on-drk-bgrd);
-}
-
-.footer .wrapper-adrs {
-  margin-right: 70px;
-}
-
 /* === Стилізація іконок соцмереж === */
 .footer .social-item .links {
   display: flex;
@@ -524,34 +459,27 @@ button {
   align-items: center;
   transition: background var(--duration-cubic);
 }
-
-.footer .social-item .links:hover,
-.footer .social-item .links:focus {
+.footer .social-item .links:hover, .footer .social-item .links:focus {
   background-color: var(--accent-color);
 }
 
-.footer .social-item .links.twitter:hover,
-.footer .social-item .links.twitter:focus {
+.footer .social-item .links:hover, .footer .social-item .links:focus {
   background-color: rgb(29, 155, 240);
 }
-
-.footer .social-item .links.instagram:hover,
-.footer .social-item .links.instagram:focus {
+.footer .social-item .instagram:hover,
+.footer .social-item .instagram:focus {
   background-color: rgba(68, 69, 78, 0);
 }
-
-.footer .social-item .links.facebook:hover,
-.footer .social-item .links.facebook:focus {
+.footer .social-item .facebook:hover,
+.footer .social-item .facebook:focus {
   background-color: rgba(68, 69, 78, 0);
 }
-
-.footer .social-item .links.youtube:hover,
-.footer .social-item .links.youtube:focus {
+.footer .social-item .youtube:hover,
+.footer .social-item .youtube:focus {
   background-color: red;
 }
-
-.footer .social-item .links.linkedin:hover,
-.footer .social-item .links.linkedin:focus {
+.footer .social-item .linkedin:hover,
+.footer .social-item .linkedin:focus {
   background-color: #0a66c2;
 }
 
@@ -597,12 +525,10 @@ button {
   padding-left: 16px;
   padding-right: 16px;
 }
-
 .user-email-input:focus-within {
   border: 1px solid var(--accent-color);
   outline: none;
 }
-
 .user-email-input::placeholder {
   font-family: inherit;
   color: rgba(255, 255, 255, 0.6);
@@ -630,9 +556,7 @@ button {
   border-radius: 4px;
   transition: opacity var(--duration-cubic), transform var(--duration-cubic), box-shadow var(--duration-cubic);
 }
-
-.btn-signup-form:hover,
-.btn-signup-form:focus {
+.btn-signup-form:hover, .btn-signup-form:focus {
   opacity: 0.95;
   transform: translate(-1px, -1px);
   box-shadow: 4px 4px 5px rgba(125, 125, 125, 0.5);

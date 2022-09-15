@@ -1,48 +1,68 @@
 .footer {
   background-color: var(--drk-bgrd-color);
   padding: 60px 0;
-}
 
-.footer .container {
-  display: flex;
-  /* gap: 70px; */
-  align-items: baseline;
+  .container {
+    display: flex;
+    align-items: baseline;
+  }
+  .social.list {
+    display: flex;
+    gap: 10px;
+  }
+  .logo.links {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  .wrapper-adrs {
+    margin-right: 70px;
+  }
 }
 
 /* ===== стилізація адресного блоку ===== */
 
-.adrs .adrs-item:not(:last-child) {
-  margin-bottom: 9px;
-  /* border: 1px solid tomato; */
+.adrs-item{
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
 }
 
-/* .adrs:hover,
-   .adrs:focus {
-  color: var(--accent-color);
-} */
+.links.adrs {
+  display: inline-block;
+  font-style: normal;
+  color: var(--text-color-on-drk-bgrd);
+  transition: color var(--duration-cubic);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  } 
+}
+
 
 .mail {
-  /* display: inline-block; */
   font-style: normal;
   color: rgba(255, 255, 255, 0.6);
   transition: color var(--duration-cubic);
- }
 
-.mail:hover,
-.mail:focus {
+  &:hover,
+  &:focus {
   color: var(--accent-color);
+  }
 }
+
+
 
 .tel {
   /* display: inline-block; */
   font-style: normal;
   color: rgba(255, 255, 255, 0.6);
   transition: color var(--duration-cubic);
-}
 
-.tel:hover,
-.tel:focus {
+  &:hover,
+  &:focus {
   color: var(--accent-color);
+  }
 }
 
 
@@ -56,71 +76,58 @@
   margin-bottom: 20px;
 }
 
-.footer .social.list {
-    display: flex;
-    gap: 10px;
-}
-
-
-.footer .logo.links {
-  display: inline-block;
-  margin-bottom: 20px;
-  /* outline: 1px solid tomato; */
-}
-
-.links.adrs {
-  display: inline-block;
-  font-style: normal;
-  color: var(--text-color-on-drk-bgrd);
-}
-
-.footer .wrapper-adrs {
-  margin-right: 70px;
-}
-
 /* === Стилізація іконок соцмереж === */
 
-.footer .social-item .links {
-  display: flex;
-  height: 44px;
-  width: 44px;
-  background-color: rgba(68, 69, 78, 1);
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-  transition: background var(--duration-cubic);
-}
+.footer {
+  .social-item{
+    .links {
+      display: flex;
+      height: 44px;
+      width: 44px;
+      background-color: rgba(68, 69, 78, 1);
+      border-radius: 50%;
+      justify-content: center;
+      align-items: center;
+      transition: background var(--duration-cubic);
 
-.footer .social-item .links:hover,
-.footer .social-item .links:focus {
-  background-color: var(--accent-color);  
-}
+      &:hover,
+      &:focus {
+        background-color: var(--accent-color);  
+      }
 
-.footer .social-item .links.twitter:hover,
-.footer .social-item .links.twitter:focus {
-  background-color: rgb(29 155 240);  
-}
+    }
+  } 
 
-.footer .social-item .links.instagram:hover,
-.footer .social-item .links.instagram:focus {
-  background-color: rgba(68, 69, 78, 0.0);  
-}
-
-.footer .social-item .links.facebook:hover,
-.footer .social-item .links.facebook:focus {
-  background-color: rgba(68, 69, 78, 0.0);  
-}
-
-.footer .social-item .links.youtube:hover,
-.footer .social-item .links.youtube:focus {
-  background-color: red;  
 }
 
 
-.footer .social-item .links.linkedin:hover,
-.footer .social-item .links.linkedin:focus {
-  background-color: #0a66c2;  
-}
+.footer{
+  .social-item{
+    .links{
+      &:hover,
+      &:focus {
+      background-color: rgb(29 155 240);  
+      // колір твітера (як що прибрати нижні ховери і поставити колір акцент буде по макету
+      }
+    }
+    .instagram:hover,
+    .instagram:focus {
+      background-color: rgba(68, 69, 78, 0.0);  
+    }
+    .facebook:hover,
+    .facebook:focus {
+      background-color: rgba(68, 69, 78, 0.0);  
+    }
+    .youtube:hover,
+    .youtube:focus {
+      background-color: red;  
+    }
+    .linkedin:hover,
+    .linkedin:focus {
+      background-color: #0a66c2;  
+    }
+  }
+} 
 
 
 .instagram-wraper {
@@ -134,10 +141,15 @@
 }
 
 
-.footer .wrapper-social .social-icon {
-  fill: var(--text-color-on-drk-bgrd);
+.footer {
+  .wrapper-social {
+    .social-icon {
+      fill: var(--text-color-on-drk-bgrd);
+    }
+  }
 }
-/* ====== стилізація форми підписки ===== */
+
+ /* ====== стилізація форми підписки ===== */
 
 .wrapper-signup-form {
   margin-left: auto;
@@ -165,16 +177,17 @@
   color: var(--text-color-on-drk-bgrd);
   padding-left: 16px;
   padding-right: 16px;
-}
 
-.user-email-input:focus-within {
+  &:focus-within {
   border: 1px solid var(--accent-color);
   outline: none;
-}
+  }
 
-.user-email-input::placeholder {
+  &::placeholder {
   font-family: inherit;
   color: rgba(255, 255, 255, 0.6);
+  }
+
 }
 
 .icon-send {margin-left: 10px; }
@@ -198,11 +211,12 @@
   transition: opacity var(--duration-cubic), 
     transform var(--duration-cubic), 
     box-shadow var(--duration-cubic);
-}
-
-.btn-signup-form:hover,
-.btn-signup-form:focus {
+  
+  &:hover,
+  &:focus {
   opacity: 0.95;
   transform: translate(-1px, -1px);
   box-shadow: 4px 4px 5px rgba(125, 125, 125, 0.5);
+  }
 }
+
