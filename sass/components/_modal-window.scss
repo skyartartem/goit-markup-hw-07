@@ -1,7 +1,7 @@
-.modal {
+/* Стилізація модального вікна */
+
+.modal-window {
   position: absolute;
-  width: 528px;
-  /* height: 581px; */
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(1);
@@ -10,14 +10,14 @@
     0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  padding: 40px;
   transition: transform var(--duration-cubic);
+
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
 }
 
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
+
 
 .close-but {
   position: absolute;
@@ -26,8 +26,6 @@
   align-items: center;
   top: 8px;
   right: 8px;
-  /* line-height: 1.42;
-  font-weight: 700; */
   background-color: var(--main-bgrnd-color);
   color: var(--secondary-text-color);
   height: 30px;
@@ -38,10 +36,11 @@
 
 .icon-cros {
   transition: fill var(--duration-cubic);
+
+  .close-but:hover &, 
+  .close-but:focus & {
+    fill: var(--accent-color);
+  }
+
 }
 
-.close-but:hover .icon-cros, 
-.close-but:focus .icon-cros {
-  /* background-color:rgba(0, 0, 0, 0.1); */
-  fill: var(--accent-color);
-}

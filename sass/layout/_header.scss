@@ -1,7 +1,6 @@
 /* Стилізація капелюха */
 
 .header { 
-  // display: block;
   border-bottom: 1px solid #ECECEC;
   .current{
     &::after {
@@ -98,7 +97,6 @@
     color: var(--accent-color);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     .smartphone {
-     border-radius: 2px;
      box-shadow: 0px 4px 4px 
      rgba(0, 0, 0, 0.25);
     }

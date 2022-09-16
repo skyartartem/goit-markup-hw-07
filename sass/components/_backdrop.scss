@@ -1,3 +1,4 @@
+/* Стилізація бекдропа модального вікна */
 
 .backdrop {
   position: fixed;
@@ -10,6 +11,8 @@
   transition: opacity var(--duration-cubic);
 }
 
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(1.5);
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
 }
+

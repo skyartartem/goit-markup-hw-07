@@ -1,5 +1,12 @@
+/* Стилізація форми модального вікна */
+
+.modal-form {
+  width: 528px;
+  /* height: 581px; */
+  padding: 40px;
+}
+
 .modal-form-title {
-  display: block;
   font-weight: 700;
   font-size: 20px;
   line-height: calc(23/20);
@@ -28,20 +35,11 @@
   line-height: calc(14/12);
   letter-spacing: 0.01em;
   transition: border var(--duration-cubic);
-}
 
-.input-user:focus {
-  border: 1px solid var(--accent-color);
-  outline: none;
-}
-
-.input-user:focus + .icons {
-  fill: var(--accent-color);
-}
-
-.input-wraper {
-  position: relative;
-  margin-bottom: 10px;
+  &:focus {
+    border: 1px solid var(--accent-color);
+    outline: none;
+  }
 }
 
 .icons {
@@ -51,7 +49,18 @@
   left: 12px;
   pointer-events: none;
   transition: fill var(--duration-cubic);
+
+  .input-user:focus + & {
+    fill: var(--accent-color);
+  }
 }
+
+.input-wraper {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+
 
 .input-user-coment {
   display: block;
@@ -66,15 +75,15 @@
   line-height: calc(14/12);
   letter-spacing: 0.01em;
   transition: border var(--duration-cubic);
-}
 
-.input-user-coment::placeholder {
- color: rgba(117, 117, 117, 0.5);
-}
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
 
-.input-user-coment:focus {
-  border: 1px solid var(--accent-color);
-  outline: none;
+  &:focus {
+    border: 1px solid var(--accent-color);
+    outline: none;
+  }
 }
 
 .chek-box-wrap {
@@ -89,17 +98,14 @@
   align-items: center;
 }
 
-.chek-box-wrap a {
+.contract-link {
   color:var(--accent-color);
-}
+  transition: text-shadow var(--duration-cubic);
 
-.check-box:checked + .custom-check {
-  background-color: var(--accent-color);
-  border: none;
-}
-
-.check-box:focus + .custom-check {
-  border-color: var(--accent-color);
+  &:hover,
+  &:focus {
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  }
 }
 
 .custom-check {
@@ -108,11 +114,20 @@
   border: 2px solid rgb(33 33 33);
   border-radius: 2px;
   margin-right: 8px;
+
+  .check-box:checked + & {
+    background-color: var(--accent-color);
+    border: none;
+  }
+
+  .check-box:focus + & {
+    border-color: var(--accent-color);
+  }
 }
 
 
-.modal .btn-signup-form {
-  display: flex;
+.send-form-button{
+  display: block;
   margin-left: auto;
   margin-right: auto;
 }

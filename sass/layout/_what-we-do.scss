@@ -1,18 +1,20 @@
-.list{
-  &.box {
+// .sec-what {background-color: aqua;}
+
+.what-we-do {
   display: flex;
   justify-content: space-between;
-  }
-  
-  .photo {
+}
+
+ 
+.what-we-do_box {
   position: relative;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
     0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  }
 }
 
-.description {
+
+.what-we-do_description {
   position: absolute;
   display:block;
   text-align: center;

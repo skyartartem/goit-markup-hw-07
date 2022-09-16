@@ -71,12 +71,27 @@ button {
   padding-right: 15px;
 }
 
-.title {
-  color: var(--secondary-text-color);
-  font-size: 36px;
-  line-height: 1.167;
-  text-align: center;
-  margin-bottom: 50px;
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 200px;
+  border: none;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.88;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  background-color: var(--accent-color);
+  color: var(--text-color-on-drk-bgrd);
+  border-radius: 4px;
+  transition: opacity var(--duration-cubic), transform var(--duration-cubic), box-shadow var(--duration-cubic);
+}
+.button:hover, .button:focus {
+  opacity: 0.95;
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 4px rgba(125, 125, 125, 0.5);
 }
 
 .logo {
@@ -95,6 +110,14 @@ button {
 /* Доповнює стилізацію нижнього логотипа */
 .logo.white {
   color: var(--text-color-on-drk-bgrd);
+}
+
+.section-title {
+  color: var(--secondary-text-color);
+  font-size: 36px;
+  line-height: 1.167;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 /* Стилізація капелюха */
@@ -179,7 +202,6 @@ button {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .header-contact:hover .smartphone, .header-contact:focus .smartphone {
-  border-radius: 2px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .header-contact:hover .letter, .header-contact:focus .letter {
@@ -200,7 +222,7 @@ button {
   padding-bottom: 200px;
 }
 
-.hero-title {
+.hero__title {
   width: 696px;
   margin-bottom: 30px;
   margin-left: auto;
@@ -212,29 +234,16 @@ button {
   text-transform: uppercase;
 }
 
-.hero-button {
-  border: none;
-  font-family: inherit;
-  font-size: 16px;
-  line-height: 1.88;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  background-color: var(--accent-color);
-  color: var(--text-color-on-drk-bgrd);
-  padding: 10px 32px;
-  border-radius: 4px;
-  transition: opacity var(--duration-cubic), transform var(--duration-cubic), box-shadow var(--duration-cubic);
-}
-.hero-button:hover, .hero-button:focus {
-  opacity: 0.95;
-  transform: translate(-1px, -1px);
-  box-shadow: 4px 4px 4px rgba(255, 255, 255, 0.43);
-}
-
-.section.benefits {
+.sec-benefits {
   padding-bottom: 0px;
 }
-.section.benefits .title-item {
+
+.sec-benefits__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sec-benefits__title-item {
   color: var(--secondary-text-color);
   font-size: 1em;
   line-height: 1.14;
@@ -242,15 +251,10 @@ button {
   margin-bottom: 10px;
 }
 
-.list.benefits {
-  display: flex;
-  justify-content: space-between;
-}
-
-.benefits-card {
+.sec-benefits__card {
   width: calc((100% - 90px) / 4);
 }
-.benefits-card::before {
+.sec-benefits__card::before {
   content: "";
   display: block;
   margin-bottom: 30px;
@@ -262,29 +266,33 @@ button {
 }
 
 /* Додаю іконки в розділ переваги */
-.benefits-card.icon-antenna::before {
+.icon-antenna::before {
   background-image: url(../images/svg/antenna.svg);
 }
-.benefits-card.icon-clock::before {
+
+.icon-clock::before {
   background-image: url(../images/svg/clock.svg);
 }
-.benefits-card.icon-diagram::before {
+
+.icon-diagram::before {
   background-image: url(../images/svg/diagram.svg);
 }
-.benefits-card.icon-astronaut::before {
+
+.icon-astronaut::before {
   background-image: url(../images/svg/astronaut.svg);
 }
 
-.list.box {
+.what-we-do {
   display: flex;
   justify-content: space-between;
 }
-.list .photo {
+
+.what-we-do_box {
   position: relative;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.description {
+.what-we-do_description {
   position: absolute;
   display: block;
   text-align: center;
@@ -299,17 +307,17 @@ button {
   text-transform: uppercase;
 }
 
-.section.team {
+.sec-team {
   background-color: #f5f4fa;
 }
 
-.position-card {
+.team-list_card {
   background-color: var(--main-bgrnd-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
-.list.team {
+.team-list {
   display: flex;
   justify-content: space-between;
 }
@@ -319,7 +327,7 @@ button {
   padding-top: 30px;
 }
 
-.section.team .name-position {
+.name-position {
   color: var(--secondary-text-color);
   font-weight: 500;
   font-size: 16px;
@@ -327,16 +335,19 @@ button {
   text-align: center;
   margin-bottom: 10px;
 }
-.section.team .position {
+
+.position {
   font-size: 16px;
   line-height: 1.187;
   text-align: center;
   margin-bottom: 16px;
 }
-.section.team .social-item .social-icon {
+
+.social-icon {
   fill: currentColor;
 }
-.section.team .social-item .links {
+
+.social-item_link {
   color: #afb1b8;
   display: flex;
   height: 44px;
@@ -346,24 +357,23 @@ button {
   align-items: center;
   transition: color var(--duration-cubic), background-color var(--duration-cubic);
 }
-.section.team .social-item .links:hover, .section.team .social-item .links:focus {
+.social-item_link:hover, .social-item_link:focus {
   background-color: var(--accent-color);
   color: var(--text-color-on-drk-bgrd);
 }
-.section.team .social.list {
+
+.social-set {
   display: flex;
   justify-content: center;
   gap: 10px;
-  /* border: 1px solid tomato; */
 }
 
-.list.clients {
+.clients-list {
   display: flex;
   gap: 30px;
 }
 
-.item-client .links {
-  /* text-decoration: none; */
+.item-client_link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -374,7 +384,7 @@ button {
   color: #AFB1B8;
   transition: box-shadow var(--duration-cubic), border-color var(--duration-cubic), color var(--duration-cubic);
 }
-.item-client .links:hover, .item-client .links:focus {
+.item-client_link:hover, .item-client_link:focus {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-color: var(--accent-color);
   color: var(--accent-color);
@@ -465,6 +475,7 @@ button {
 
 .footer .social-item .links:hover, .footer .social-item .links:focus {
   background-color: rgb(29, 155, 240);
+  /* колір твітера (як що прибрати нижні ховери і поставити колір акцент буде по макету*/
 }
 .footer .social-item .instagram:hover,
 .footer .social-item .instagram:focus {
@@ -538,30 +549,7 @@ button {
   margin-left: 10px;
 }
 
-.btn-signup-form {
-  display: inline-flex;
-  border: none;
-  height: 50px;
-  width: 200px;
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.875;
-  align-items: center;
-  justify-content: center;
-  letter-spacing: 0.06em;
-  color: var(--text-color-on-drk-bgrd);
-  padding: 10px auto;
-  background: var(--accent-color);
-  border-radius: 4px;
-  transition: opacity var(--duration-cubic), transform var(--duration-cubic), box-shadow var(--duration-cubic);
-}
-.btn-signup-form:hover, .btn-signup-form:focus {
-  opacity: 0.95;
-  transform: translate(-1px, -1px);
-  box-shadow: 4px 4px 5px rgba(125, 125, 125, 0.5);
-}
-
+/* Стилізація бекдропа модального вікна */
 .backdrop {
   position: fixed;
   top: 0;
@@ -573,27 +561,24 @@ button {
   transition: opacity var(--duration-cubic);
 }
 
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(1.5);
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
-.modal {
+/* Стилізація модального вікна */
+.modal-window {
   position: absolute;
-  width: 528px;
-  /* height: 581px; */
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(1);
   background: var(--main-bgrnd-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  padding: 40px;
   transition: transform var(--duration-cubic);
 }
-
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
+.backdrop.is-hidden .modal-window {
+  transform: translate(-50%, -50%) scale(1.5);
 }
 
 .close-but {
@@ -603,8 +588,6 @@ button {
   align-items: center;
   top: 8px;
   right: 8px;
-  /* line-height: 1.42;
-  font-weight: 700; */
   background-color: var(--main-bgrnd-color);
   color: var(--secondary-text-color);
   height: 30px;
@@ -616,15 +599,18 @@ button {
 .icon-cros {
   transition: fill var(--duration-cubic);
 }
-
-.close-but:hover .icon-cros,
-.close-but:focus .icon-cros {
-  /* background-color:rgba(0, 0, 0, 0.1); */
+.close-but:hover .icon-cros, .close-but:focus .icon-cros {
   fill: var(--accent-color);
 }
 
+/* Стилізація форми модального вікна */
+.modal-form {
+  width: 528px;
+  /* height: 581px; */
+  padding: 40px;
+}
+
 .modal-form-title {
-  display: block;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -654,19 +640,9 @@ button {
   letter-spacing: 0.01em;
   transition: border var(--duration-cubic);
 }
-
 .input-user:focus {
   border: 1px solid var(--accent-color);
   outline: none;
-}
-
-.input-user:focus + .icons {
-  fill: var(--accent-color);
-}
-
-.input-wraper {
-  position: relative;
-  margin-bottom: 10px;
 }
 
 .icons {
@@ -676,6 +652,14 @@ button {
   left: 12px;
   pointer-events: none;
   transition: fill var(--duration-cubic);
+}
+.input-user:focus + .icons {
+  fill: var(--accent-color);
+}
+
+.input-wraper {
+  position: relative;
+  margin-bottom: 10px;
 }
 
 .input-user-coment {
@@ -692,11 +676,9 @@ button {
   letter-spacing: 0.01em;
   transition: border var(--duration-cubic);
 }
-
 .input-user-coment::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
-
 .input-user-coment:focus {
   border: 1px solid var(--accent-color);
   outline: none;
@@ -714,17 +696,12 @@ button {
   align-items: center;
 }
 
-.chek-box-wrap a {
+.contract-link {
   color: var(--accent-color);
+  transition: text-shadow var(--duration-cubic);
 }
-
-.check-box:checked + .custom-check {
-  background-color: var(--accent-color);
-  border: none;
-}
-
-.check-box:focus + .custom-check {
-  border-color: var(--accent-color);
+.contract-link:hover, .contract-link:focus {
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
 }
 
 .custom-check {
@@ -734,9 +711,16 @@ button {
   border-radius: 2px;
   margin-right: 8px;
 }
+.check-box:checked + .custom-check {
+  background-color: var(--accent-color);
+  border: none;
+}
+.check-box:focus + .custom-check {
+  border-color: var(--accent-color);
+}
 
-.modal .btn-signup-form {
-  display: flex;
+.send-form-button {
+  display: block;
   margin-left: auto;
   margin-right: auto;
 }/*# sourceMappingURL=main.css.map */
