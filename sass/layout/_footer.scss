@@ -7,11 +7,7 @@
     align-items: baseline;
   }
 
-  .social.list {
-    display: flex;
-    gap: 10px;
-  }
-
+  
   .logo {
     display: inline-block;
     margin-bottom: 20px;
@@ -30,7 +26,7 @@
   }
 }
 
-.links.adrs {
+.adrs-list__link {
   // display: inline-block;
   font-style: normal;
   color: var(--text-color-on-drk-bgrd);
@@ -43,7 +39,7 @@
 }
 
 
-.mail {
+.adrs-list__mail {
   font-style: normal;
   color: rgba(255, 255, 255, 0.6);
   transition: color var(--duration-cubic);
@@ -56,7 +52,7 @@
 
 
 
-.tel {
+.adrs-list__tel {
   /* display: inline-block; */
   font-style: normal;
   color: rgba(255, 255, 255, 0.6);
@@ -68,8 +64,9 @@
   }
 }
 
+/* === Стилізація блока соцмереж === */
 
-.social-title {
+.social-set-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.143;
@@ -81,54 +78,48 @@
 
 /* === Стилізація іконок соцмереж === */
 
+.social-set {
+  display: flex;
+  gap: 10px;
+}
+
 .footer {
-  .social-item{
-    .links {
-      display: flex;
-      height: 44px;
-      width: 44px;
-      background-color: rgba(68, 69, 78, 1);
-      border-radius: 50%;
-      justify-content: center;
-      align-items: center;
-      transition: background var(--duration-cubic);
-
-      &:hover,
-      &:focus {
-        background-color: var(--accent-color);  
-      }
-
-    }
-  } 
-
+  .social-item_link {
+    display: flex;
+    height: 44px;
+    width: 44px;
+    background-color: rgba(68, 69, 78, 1);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    transition: background-color var(--duration-cubic);
+  }
 }
 
 
 .footer{
-  .social-item{
-    .links{
-      &:hover,
-      &:focus {
+  .social-item_link{
+    &:hover,
+    &:focus {
       background-color: rgb(29 155 240);  
       /* колір твітера (як що прибрати нижні ховери і поставити колір акцент буде по макету*/
-      }
     }
-    .instagram:hover,
-    .instagram:focus {
-      background-color: rgba(68, 69, 78, 0.0);  
-    }
-    .facebook:hover,
-    .facebook:focus {
-      background-color: rgba(68, 69, 78, 0.0);  
-    }
-    .youtube:hover,
-    .youtube:focus {
-      background-color: red;  
-    }
-    .linkedin:hover,
-    .linkedin:focus {
-      background-color: #0a66c2;  
-    }
+  }
+  .instagram:hover,
+  .instagram:focus {
+    background-color: rgba(68, 69, 78, 0.0);  
+  }
+  .facebook:hover,
+  .facebook:focus {
+    background-color: rgba(68, 69, 78, 0.0);  
+  }
+  .youtube:hover,
+  .youtube:focus {
+    background-color: red;  
+  }
+  .linkedin:hover,
+  .linkedin:focus {
+    background-color: #0a66c2;  
   }
 } 
 
@@ -143,12 +134,9 @@
   background-image:linear-gradient(to bottom, #19aefe, #0062e0);
 }
 
-
-.footer {
-  .wrapper-social {
-    .social-icon {
-      fill: var(--text-color-on-drk-bgrd);
-    }
+.wrapper-social {
+  .social-icon {
+    fill: var(--text-color-on-drk-bgrd);
   }
 }
 

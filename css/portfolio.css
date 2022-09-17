@@ -7,7 +7,7 @@
   --text-color-on-drk-bgrd: #ffffff;
   --drk-bgrd-color: #2f303a;
   --cards-border-color: #eeeeee;
-  --duration-cubic: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-cubic: 200ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .visually-hidden {
@@ -328,10 +328,6 @@ button {
   display: flex;
   align-items: baseline;
 }
-.footer .social.list {
-  display: flex;
-  gap: 10px;
-}
 .footer .logo {
   display: inline-block;
   margin-bottom: 20px;
@@ -345,35 +341,36 @@ button {
   margin-bottom: 9px;
 }
 
-.links.adrs {
+.adrs-list__link {
   font-style: normal;
   color: var(--text-color-on-drk-bgrd);
   transition: color var(--duration-cubic);
 }
-.links.adrs:hover, .links.adrs:focus {
+.adrs-list__link:hover, .adrs-list__link:focus {
   color: var(--accent-color);
 }
 
-.mail {
+.adrs-list__mail {
   font-style: normal;
   color: rgba(255, 255, 255, 0.6);
   transition: color var(--duration-cubic);
 }
-.mail:hover, .mail:focus {
+.adrs-list__mail:hover, .adrs-list__mail:focus {
   color: var(--accent-color);
 }
 
-.tel {
+.adrs-list__tel {
   /* display: inline-block; */
   font-style: normal;
   color: rgba(255, 255, 255, 0.6);
   transition: color var(--duration-cubic);
 }
-.tel:hover, .tel:focus {
+.adrs-list__tel:hover, .adrs-list__tel:focus {
   color: var(--accent-color);
 }
 
-.social-title {
+/* === Стилізація блока соцмереж === */
+.social-set-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.143;
@@ -384,7 +381,12 @@ button {
 }
 
 /* === Стилізація іконок соцмереж === */
-.footer .social-item .links {
+.social-set {
+  display: flex;
+  gap: 10px;
+}
+
+.footer .social-item_link {
   display: flex;
   height: 44px;
   width: 44px;
@@ -392,30 +394,27 @@ button {
   border-radius: 50%;
   justify-content: center;
   align-items: center;
-  transition: background var(--duration-cubic);
-}
-.footer .social-item .links:hover, .footer .social-item .links:focus {
-  background-color: var(--accent-color);
+  transition: background-color var(--duration-cubic);
 }
 
-.footer .social-item .links:hover, .footer .social-item .links:focus {
+.footer .social-item_link:hover, .footer .social-item_link:focus {
   background-color: rgb(29, 155, 240);
   /* колір твітера (як що прибрати нижні ховери і поставити колір акцент буде по макету*/
 }
-.footer .social-item .instagram:hover,
-.footer .social-item .instagram:focus {
+.footer .instagram:hover,
+.footer .instagram:focus {
   background-color: rgba(68, 69, 78, 0);
 }
-.footer .social-item .facebook:hover,
-.footer .social-item .facebook:focus {
+.footer .facebook:hover,
+.footer .facebook:focus {
   background-color: rgba(68, 69, 78, 0);
 }
-.footer .social-item .youtube:hover,
-.footer .social-item .youtube:focus {
+.footer .youtube:hover,
+.footer .youtube:focus {
   background-color: red;
 }
-.footer .social-item .linkedin:hover,
-.footer .social-item .linkedin:focus {
+.footer .linkedin:hover,
+.footer .linkedin:focus {
   background-color: #0a66c2;
 }
 
@@ -429,7 +428,7 @@ button {
   background-image: linear-gradient(to bottom, #19aefe, #0062e0);
 }
 
-.footer .wrapper-social .social-icon {
+.wrapper-social .social-icon {
   fill: var(--text-color-on-drk-bgrd);
 }
 
