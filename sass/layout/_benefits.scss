@@ -31,29 +31,36 @@
   }
 }
 
+
+
 /* Додаю іконки в розділ переваги */
 
-.icon-antenna{
-  &::before {
-    background-image: url(../images/svg/antenna.svg);
-  }
-}
+$icons: "antenna", "clock", "diagram", "astronaut";
 
-.icon-clock{
-   &::before {
-    background-image: url(../images/svg/clock.svg);
-  }
-}
 
-.icon-diagram{
-  &::before {
-    background-image: url(../images/svg/diagram.svg);
-  }
-}
+@include generateIcons($icons);
 
-.icon-astronaut{
-  &::before {
-    background-image: url(../images/svg/astronaut.svg);
-  }
-}
+// .icon-antenna{
+//   &::before {
+//     background-image: url(../images/svg/antenna.svg);
+//   }
+// }
+
+// .icon-clock{
+//    &::before {
+//     background-image: url(../images/svg/clock.svg);
+//   }
+// }
+
+// .icon-diagram{
+//   &::before {
+//     background-image: url(../images/svg/diagram.svg);
+//   }
+// }
+
+// .icon-astronaut{
+//   &::before {
+//     background-image: url(../images/svg/astronaut.svg);
+//   }
+// }
 
