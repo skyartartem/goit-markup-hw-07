@@ -101,14 +101,18 @@ button {
   font-size: 26px;
   line-height: 1.19;
   color: var(--accent-color);
+  transition: text-shadow var(--duration-cubic);
+}
+.logo:hover, .logo:focus {
+  text-shadow: 0px 0px 10px rgba(125, 125, 125, 0.5);
 }
 
-.logo.black {
+.logo_black {
   color: var(--secondary-text-color);
 }
 
 /* Доповнює стилізацію нижнього логотипа */
-.logo.white {
+.logo_white {
   color: var(--text-color-on-drk-bgrd);
 }
 
@@ -124,7 +128,13 @@ button {
 .header {
   border-bottom: 1px solid #ECECEC;
 }
-.header .current::after {
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-nav_link.current::after {
   position: absolute;
   display: block;
   content: "";
@@ -134,30 +144,24 @@ button {
   border-radius: 2px;
   bottom: 0%;
 }
-.header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
 .navigation {
   display: flex;
   align-items: center;
 }
-.navigation .logo.links {
+.navigation .logo {
   margin-right: 93px;
 }
 
 .site-nav {
   display: flex;
 }
-.site-nav .items:not(:last-child) {
+
+.site-nav_item:not(:last-child) {
   margin-right: 30px;
 }
-.site-nav .links.current {
-  color: var(--accent-color);
-}
-.site-nav .links {
+
+.site-nav_link {
   position: relative;
   display: block;
   padding-top: 32px;
@@ -168,16 +172,20 @@ button {
   color: var(--secondary-text-color);
   transition: color var(--duration-cubic), text-shadow var(--duration-cubic);
 }
-.site-nav .links:hover, .site-nav .links:focus {
+.site-nav_link:hover, .site-nav_link:focus {
   color: var(--accent-color);
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.site-nav_link.current {
+  color: var(--accent-color);
+}
+
 /* Стилізація контактів в капелюсі */
-.contacts {
+.contact-list {
   display: flex;
 }
-.contacts .items:not(:last-child) {
+.contact-list .contact-list_item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -406,7 +414,7 @@ button {
   display: flex;
   gap: 10px;
 }
-.footer .logo.links {
+.footer .logo {
   display: inline-block;
   margin-bottom: 20px;
 }
@@ -420,7 +428,6 @@ button {
 }
 
 .links.adrs {
-  display: inline-block;
   font-style: normal;
   color: var(--text-color-on-drk-bgrd);
   transition: color var(--duration-cubic);
@@ -509,7 +516,7 @@ button {
 }
 
 /* ====== стилізація форми підписки ===== */
-.wrapper-signup-form {
+.signup-form {
   margin-left: auto;
 }
 

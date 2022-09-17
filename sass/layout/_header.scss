@@ -2,7 +2,15 @@
 
 .header { 
   border-bottom: 1px solid #ECECEC;
-  .current{
+ 
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.site-nav_link{
+  &.current{
     &::after {
       position: absolute;
       display: block;
@@ -12,68 +20,58 @@
       background-color: var(--accent-color);
       border-radius: 2px;
       bottom: 0%;
-      } 
-  }
-
-  .container {
-    display: flex;
-    justify-content: space-between;
-   align-items: center;
+    } 
   }
 }
-
 
 .navigation {
   display: flex;
   align-items: center;  
 
-  .logo.links {
+  .logo {
     margin-right: 93px;
   } 
 }
 
 .site-nav {
   display: flex;
-  .items:not(:last-child) {
-   margin-right: 30px;
-  }
-
-  .links.current {
-  color: var(--accent-color);
-  }
-  .links {
-    position: relative;
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    color: var(--secondary-text-color);
-    transition: color var(--duration-cubic), text-shadow var(--duration-cubic);
-
-    &:hover,
-    &:focus {
-      color: var(--accent-color);
-      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
-
-  }
-
 }
 
 
+.site-nav_item:not(:last-child) {
+  margin-right: 30px;
+}
 
+.site-nav_link {
+  position: relative;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--secondary-text-color);
+  transition: color var(--duration-cubic), text-shadow var(--duration-cubic);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.site-nav_link.current {
+  color: var(--accent-color);
+}
 
 /* Стилізація контактів в капелюсі */
 
-.contacts {
+.contact-list {
   display: flex;
-  .items:not(:last-child) {
+  .contact-list_item:not(:last-child) {
    margin-right: 30px;
   }
 }
-
 
 .smartphone, 
 .letter {

@@ -78,14 +78,18 @@ button {
   font-size: 26px;
   line-height: 1.19;
   color: var(--accent-color);
+  transition: text-shadow var(--duration-cubic);
+}
+.logo:hover, .logo:focus {
+  text-shadow: 0px 0px 10px rgba(125, 125, 125, 0.5);
 }
 
-.logo.black {
+.logo_black {
   color: var(--secondary-text-color);
 }
 
 /* Доповнює стилізацію нижнього логотипа */
-.logo.white {
+.logo_white {
   color: var(--text-color-on-drk-bgrd);
 }
 
@@ -124,7 +128,13 @@ button {
 .header {
   border-bottom: 1px solid #ECECEC;
 }
-.header .current::after {
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-nav_link.current::after {
   position: absolute;
   display: block;
   content: "";
@@ -134,30 +144,24 @@ button {
   border-radius: 2px;
   bottom: 0%;
 }
-.header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
 .navigation {
   display: flex;
   align-items: center;
 }
-.navigation .logo.links {
+.navigation .logo {
   margin-right: 93px;
 }
 
 .site-nav {
   display: flex;
 }
-.site-nav .items:not(:last-child) {
+
+.site-nav_item:not(:last-child) {
   margin-right: 30px;
 }
-.site-nav .links.current {
-  color: var(--accent-color);
-}
-.site-nav .links {
+
+.site-nav_link {
   position: relative;
   display: block;
   padding-top: 32px;
@@ -168,16 +172,20 @@ button {
   color: var(--secondary-text-color);
   transition: color var(--duration-cubic), text-shadow var(--duration-cubic);
 }
-.site-nav .links:hover, .site-nav .links:focus {
+.site-nav_link:hover, .site-nav_link:focus {
   color: var(--accent-color);
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.site-nav_link.current {
+  color: var(--accent-color);
+}
+
 /* Стилізація контактів в капелюсі */
-.contacts {
+.contact-list {
   display: flex;
 }
-.contacts .items:not(:last-child) {
+.contact-list .contact-list_item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -209,12 +217,13 @@ button {
 }
 
 /* Стилізація кнопок вибору категорії */
-.categories {
+.set-categories {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
 }
-.categories li:not(:last-child) {
+
+.set-categories_item:not(:last-child) {
   margin-right: 8px;
 }
 
@@ -242,28 +251,31 @@ button {
 }
 
 /* ========= Стилізація галереї ========== */
-.list.project {
+.project-list {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: space-between; */
   margin: -15px;
 }
 
 .project-card {
   margin: 15px;
 }
-.project-card .img-project {
+
+.img-project {
   position: relative;
-  /* border: 1px solid tomato; */
   overflow: hidden;
 }
-.project-card .links {
+
+.project-card_link {
   display: block;
   border-radius: 0px 0px 4px 4px;
   transition: box-shadow var(--duration-cubic);
 }
-.project-card .links:hover, .project-card .links:focus {
+.project-card_link:hover, .project-card_link:focus {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.project-card_link:hover .hoverer-overlay, .project-card_link:focus .hoverer-overlay {
+  transform: translateY(0%);
 }
 
 .hoverer-overlay {
@@ -277,10 +289,6 @@ button {
   transition: transform var(--duration-cubic);
 }
 
-.project-card .links:hover .hoverer-overlay, .project-card .links:focus .hoverer-overlay {
-  transform: translateY(0%);
-}
-
 .overlay-text {
   display: block;
   color: var(--text-color-on-drk-bgrd);
@@ -289,7 +297,7 @@ button {
   padding: 63px 24px;
 }
 
-.list.project .box {
+.project-card_box {
   border-left: 1px solid var(--cards-border-color);
   border-right: 1px solid var(--cards-border-color);
   border-bottom: 1px solid var(--cards-border-color);
@@ -297,7 +305,7 @@ button {
   border-radius: 0px 0px 4px 4px;
 }
 
-.box .name-project {
+.name-project {
   color: var(--secondary-text-color);
   font-weight: 700;
   font-size: 18px;
@@ -305,11 +313,11 @@ button {
   letter-spacing: 0.06em;
   margin-bottom: 4px;
 }
-.box .project {
+
+.project {
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.88;
-  /* border: 1px solid tomato; */
 }
 
 .footer {
@@ -324,7 +332,7 @@ button {
   display: flex;
   gap: 10px;
 }
-.footer .logo.links {
+.footer .logo {
   display: inline-block;
   margin-bottom: 20px;
 }
@@ -338,7 +346,6 @@ button {
 }
 
 .links.adrs {
-  display: inline-block;
   font-style: normal;
   color: var(--text-color-on-drk-bgrd);
   transition: color var(--duration-cubic);
@@ -427,7 +434,7 @@ button {
 }
 
 /* ====== стилізація форми підписки ===== */
-.wrapper-signup-form {
+.signup-form {
   margin-left: auto;
 }
 

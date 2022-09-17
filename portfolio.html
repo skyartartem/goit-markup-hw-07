@@ -38,40 +38,38 @@
                <!-- Логотип чорний -->
 
                 <a class="logo links" href="./index.html"
-                >Web<span class="logo black">Studio</span></a
+                >Web<span class="logo_black">Studio</span></a
                 >
 
                   <!-- Навігація -->
 
                 <ul class="site-nav list">
-                  <li class="items">
-                    <a class="links" href="./">Студія</a>
+                  <li class="site-nav_item">
+                    <a class="site-nav_link links" href="./">Студія</a>
                   </li>
-
-                  <li class="items">
-                    <a class="links current" href="./portfolio.html">Портфоліо</a>
+                  <li class="site-nav_item">
+                    <a class="site-nav_link current links" href="./portfolio.html">Портфоліо</a>
                   </li>
-
-                  <li class="items">
-                    <a class="links" href="./">Контакти</a>
+                  <li class="site-nav_item">
+                    <a class="site-nav_link links" href="./">Контакти</a>
                   </li>
                 </ul>
             </nav>
 
                   <!-- Контакти в капелюсі чомусь окремо від навігаціі -->
 
-                <ul class="list contacts">
-                  <li  class="items">
+                <ul class="list contact-list">
+                  <li  class="contact-list_item">
                   <a class="header-contact links" href="mailto:info@devstudio.com"
                   >
                     <svg class="letter"  width="16" height="12">
-                      <use href="./images/icons.svg#icon-letter">
+                      <use  href="./images/icons.svg#icon-letter" class="letter-ico">
                       </use>
                     </svg>
                     info@devstudio.com</a
                   >
                   </li>
-                  <li class="items">
+                  <li class="contact-list_item">
                       <a class="header-contact links"
                         href="tel:+380961111111"
                         >
@@ -79,7 +77,8 @@
                       <use href="./images/icons.svg#icon-smartphone">
                       </use>
                     </svg>
-                        +38 096 111 11 11</a>
+                        +38 096 111 11 11</a
+                      >
                   </li>
                 </ul>
         </div>
@@ -92,29 +91,29 @@
 
         <div class="container">
 
-          <h1 class="title visually-hidden">PORTFOLIO PAGE</h1>
+          <h1 class="section-title visually-hidden">PORTFOLIO PAGE</h1>
 
         <!-- Кнопки вибору категорій -->
 
-        <ul class="categories list">
+        <ul class="set-categories list">
 
-          <li>
+          <li class="set-categories_item">
             <button class="categories-but current" type="button">Все</button>
           </li>
 
-          <li>
+          <li class="set-categories_item">
             <button class="categories-but" type="button">Веб-сайти</button>
           </li>
 
-          <li>
+          <li class="set-categories_item">
             <button class="categories-but" type="button">Додатки</button>
           </li>
 
-          <li>
+          <li class="set-categories_item">
             <button class="categories-but" type="button">Дизайн</button>
           </li>
 
-          <li>
+          <li class="set-categories_item">
             <button class="categories-but" type="button">Маркетинг</button>
           </li>
 
@@ -122,22 +121,22 @@
 
         <!-- галерея проектів -->
 
-        <ul class="list project">
+        <ul class="list project-list">
           <!-- 01 -->
 
           <li class="project-card">
-            <a class="links" href=""
+            <a class="project-card_link links" href=""
               ><div class="img-project">
                 <img 
                 src="./images/project-img/img-01.jpg"
                 alt="Ноутбук"
                 width="370"
-              />
-              <div class="hoverer-overlay">
-                <p class="overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+                />
+                <div class="hoverer-overlay">
+                  <p class="overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+                </div>
               </div>
-              </div>
-                <div class="box">
+                <div class="project-card_box">
                   <h3 class="name-project">Технокряк</h3>
                   <p class="project">Веб-сайт</p>
                 </div>
@@ -147,7 +146,7 @@
           <!-- 02 -->
 
           <li class="project-card">
-            <a class="links" href=""
+            <a class="project-card_link links" href=""
               >
               <div class="img-project">
               <img
@@ -159,7 +158,7 @@
                 <p class="overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
               </div>
               </div>
-                <div class="box">
+                <div class="project-card_box">
                   <h3 class="name-project">Постер New Orlean vs Golden Star</h3>
                   <p class="project">Дизайн</p>
                 </div>
@@ -169,7 +168,7 @@
           <!-- 03 -->
 
           <li class="project-card">
-            <a class="links" href=""
+            <a class="project-card_link links" href=""
               >
               <div class="img-project">
               <img
@@ -181,7 +180,7 @@
                 <p class="overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
               </div>
               </div>
-                <div class="box">
+                <div class="project-card_box">
                   <h3 class="name-project">Ресторан Seafood</h3>
                   <p class="project">Додаток</p>
                 </div>
@@ -191,7 +190,7 @@
           <!-- 04 -->
 
           <li class="project-card">
-            <a class="links" href=""
+            <a class="project-card_link links" href=""
               >
               <div class="img-project">
               <img
@@ -203,7 +202,7 @@
                 <p class="overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
               </div>
               </div>
-              <div class="box">
+              <div class="project-card_box">
                 <h3 class="name-project">Проєкт Prime</h3>
                 <p class="project">Маркетинг</p>
               </div>
@@ -213,7 +212,7 @@
           <!-- 05 -->
 
           <li class="project-card">
-            <a class="links" href=""
+            <a class="project-card_link links" href=""
               >
               <div class="img-project">
               <img
@@ -225,7 +224,7 @@
                 <p class="overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                 </div>
                 </div>
-                <div class="box">
+                <div class="project-card_box">
                  <h3 class="name-project">Проєкт Boxes</h3>
                  <p class="project">Додаток</p>
                 </div>
@@ -235,7 +234,7 @@
           <!-- 06 -->
 
           <li class="project-card">
-            <a class="links" href=""
+            <a class="project-card_link links" href=""
               >
               <div class="img-project">
               <img
@@ -248,7 +247,7 @@
                 </div>
               
                 </div>
-                <div class="box">
+                <div class="project-card_box">
                  <h3 class="name-project">Inspiration has   no Borders</h3>
                  <p class="project">Веб-сайт</p>
                 </div>
@@ -258,7 +257,7 @@
           <!-- 07 -->
 
           <li class="project-card">
-            <a class="links" href="">
+            <a class="project-card_link links" href="">
               <div class="img-project">
               <img
                 src="./images/project-img/img-07.jpg"
@@ -269,7 +268,7 @@
                 <p class="overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                 </div>
               </div>
-                <div class="box">
+                <div class="project-card_box">
                  <h3 class="name-project">Видання Limited   Edition</h3>
                  <p class="project">Дизайн</p>
                 </div>
@@ -279,7 +278,7 @@
           <!-- 08 -->
 
           <li class="project-card">
-            <a class="links" href=""
+            <a class="project-card_link links" href=""
               >
               <div class="img-project">
               <img
@@ -291,7 +290,7 @@
                 <p class="overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                 </div>
               </div>
-              <div class="box">
+              <div class="project-card_box">
                 <h3 class="name-project">Проект LAB</h3>
                  <p class="project">Маркетинг</p>
               </div>
@@ -301,7 +300,7 @@
           <!-- 09 -->
 
           <li class="project-card">
-            <a class="links" href=""
+            <a class="project-card_link links" href=""
               >
               <div class="img-project">
               <img
@@ -313,7 +312,7 @@
                 <p class="overlay-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                 </div>
               </div>
-              <div class="box">
+              <div class="project-card_box">
                 <h3 class="name-project">Growing   Business</h3>
                <p class="project">Додаток</p>
               </div>
@@ -336,7 +335,7 @@
 
       <div class="wrapper-adrs">
         <a class="logo links" href="./index.html"
-        >Web<span class="logo white">Studio</span></a
+        >Web<span class="logo_white">Studio</span></a
       >
       <!-- Адресса -->
 
@@ -440,7 +439,7 @@
             </ul>
         </div>
 
-              <form class="wrapper-signup-form" name="signup-form">
+        <form class="signup-form" name="signup-form">
             <label class="label-name" for="user-email">
               Підпишіться на розсилку
             </label> 
