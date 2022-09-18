@@ -42,15 +42,15 @@
 
                   <!-- Навігація -->
 
-                <ul class="site-nav list">
-                  <li class="site-nav_item">
-                    <a class="site-nav_link current links" href="./">Студія</a>
+                <ul class="menu-list list">
+                  <li class="menu-list__item">
+                    <a class="menu-list__link current links" href="./">Студія</a>
                   </li>
-                  <li class="site-nav_item">
-                    <a class="site-nav_link links" href="./portfolio.html">Портфоліо</a>
+                  <li class="menu-list__item">
+                    <a class="menu-list__link links" href="./portfolio.html">Портфоліо</a>
                   </li>
-                  <li class="site-nav_item">
-                    <a class="site-nav_link links" href="./">Контакти</a>
+                  <li class="menu-list__item">
+                    <a class="menu-list__link links" href="./">Контакти</a>
                   </li>
                 </ul>
             </nav>
@@ -58,7 +58,7 @@
                   <!-- Контакти в капелюсі чомусь окремо від навігаціі -->
 
                 <ul class="list contact-list">
-                  <li  class="contact-list_item">
+                  <li  class="contact-list__item">
                   <a class="header-contact links" href="mailto:info@devstudio.com"
                   >
                     <svg class="letter"  width="16" height="12">
@@ -100,7 +100,7 @@
 
       <!-- Переваги -->
 
-      <section class="section sec-benefits">
+      <section class="section benefits">
 
         <div class="container">
 
@@ -108,13 +108,13 @@
 
           <h2 class="section-title visually-hidden">Наші переваги</h2>
 
-          <ul class="list sec-benefits__list">
+          <ul class="list benefits__list">
 
             <!-- 01 -->
 
-            <li class="sec-benefits__card icon-antenna">
-              <h3 class="sec-benefits__title-item">УВАГА ДО ДЕТАЛЕЙ</h3>
-              <p class="sec-benefits__description" >
+            <li class="benefits__item icon-antenna">
+              <h3 class="benefits__title">УВАГА ДО ДЕТАЛЕЙ</h3>
+              <p class="benefits__description" >
                 Ідейні міркування, і навіть початок повсякденної роботи з
                 формування позиції.
               </p>
@@ -122,8 +122,8 @@
 
             <!-- 02 -->
 
-            <li class="sec-benefits__card icon-clock">
-              <h3 class="sec-benefits__title-item">ПУНКТУАЛЬНІСТЬ</h3>
+            <li class="benefits__item icon-clock">
+              <h3 class="benefits__title">ПУНКТУАЛЬНІСТЬ</h3>
               <p>
                 Завдання організації, особливо рамки і місце навчання кадрів тягне
                 у себе.
@@ -132,8 +132,8 @@
 
             <!-- 03 -->
 
-            <li class="sec-benefits__card icon-diagram">
-              <h3 class="sec-benefits__title-item">ПЛАНУВАННЯ</h3>
+            <li class="benefits__item icon-diagram">
+              <h3 class="benefits__title">ПЛАНУВАННЯ</h3>
               <p>
                 Так само консультація з широким активом значною мірою зумовлює.
               </p>
@@ -141,8 +141,8 @@
 
             <!-- 04 -->
 
-            <li class="sec-benefits__card icon-astronaut">
-              <h3 class="sec-benefits__title-item">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
+            <li class="benefits__item icon-astronaut">
+              <h3 class="benefits__title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
               <p>
                 Значимість цих проблем настільки очевидна, що реалізація планових
                 завдань.
@@ -158,30 +158,30 @@
 
       <!-- Чим ми займаємося -->
 
-      <section class="section sec-what">
+      <section class="section what">
        
         <div class="container">
 
           <h2 class="section-title">Чим ми займаємося</h2>
 
-          <ul class="list what-we-do">
+          <ul class="list what-we-do-list">
 
-            <li class="what-we-do_box">
+            <li class="what-we-do-list__item">
               <img src="./images/img-01.jpg" alt="codding process" width="370" />
-              <p class="what-we-do_description">
+              <p class="what-we-do-list__description">
                 Десктопні додатки
               </p>
             </li>
 
-            <li class="what-we-do_box"><img src="./images/img-02.jpg" alt="maketing" width="370" />
-              <p class="what-we-do_description">
+            <li class="what-we-do-list__item"><img src="./images/img-02.jpg" alt="maketing" width="370" />
+              <p class="what-we-do-list__description">
                 Мобільні додатки
               </p>
             </li>
 
-            <li class="what-we-do_box">
+            <li class="what-we-do-list__item">
               <img src="./images/img-03.jpg" alt="color matching" width="370" />
-              <p class="what-we-do_description">
+              <p class="what-we-do-list__description">
                 Дизайнерські рішення
               </p>
             </li>
@@ -193,7 +193,7 @@
 
       <!-- Наша команда -->
 
-      <section class="section sec-team">
+      <section class="section team">
 
         <div class="container">
 
@@ -204,20 +204,20 @@
 
             <!-- 01 Ігор Дем'яненко -->
 
-          <li class="team-list_card">
+          <li class="team-list__item">
             <img class="photo-pisition"
               src="./images/photo-01.jpg"
               alt="Product Designer portrait"
               width="270"
              />
-            <div class="position-box">
+            <div class="position-wrapper">
               <h3 class="name-position">Ігор Дем'яненко</h3>
             <p class="position">Product Designer</p>
 
             <ul class="social-set list">
                 <li class="social-item">
                   <!-- instagram -->
-                  <a class="links social-item_link" href="#" >
+                  <a class="links social-item__link" href="#" >
                       <svg class="social-icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-instagram">
                         </use>
@@ -227,7 +227,7 @@
 
                 <li class="social-item">
                   <!-- twitter -->
-                  <a class="links social-item_link" href="#" >
+                  <a class="links social-item__link" href="#" >
                       <svg class="social-icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-twitter">
                         </use>
@@ -237,7 +237,7 @@
 
                 <li class="social-item">
                   <!-- facebook -->
-                  <a class="links social-item_link" href="#" >
+                  <a class="links social-item__link" href="#" >
                       <svg class="social-icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-facebook">
                         </use>
@@ -247,7 +247,7 @@
 
                 <li class="social-item">
                   <!-- linkedin -->
-                  <a class="links social-item_link" href="#" >
+                  <a class="links social-item__link" href="#" >
                       <svg class="social-icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-linkedin">
                         </use>
@@ -260,20 +260,20 @@
 
             <!-- 02 Ольга Рєпіна -->
 
-          <li class="team-list_card">
+          <li class="team-list__item">
             <img class="photo-pisition"
               src="./images/photo-02.jpg"
               alt="Frontend Developer portrait"
               width="270"
             />
-            <div class="position-box">
+            <div class="position-wrapper">
               <h3 class="name-position">Ольга Рєпіна</h3>
             <p class="position">Frontend Developer</p>
 
             <ul class="social-set list">
                 <li class="social-item">
                   <!-- instagram -->
-                  <a class="links social-item_link" href="#" >
+                  <a class="links social-item__link" href="#" >
                       <svg class="social-icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-instagram">
                         </use>
@@ -283,7 +283,7 @@
 
                 <li class="social-item">
                   <!-- twitter -->
-                  <a class="links social-item_link" href="#" >
+                  <a class="links social-item__link" href="#" >
                       <svg class="social-icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-twitter">
                         </use>
@@ -293,7 +293,7 @@
 
                 <li class="social-item">
                   <!-- facebook -->
-                  <a class="links social-item_link" href="#" >
+                  <a class="links social-item__link" href="#" >
                       <svg class="social-icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-facebook">
                         </use>
@@ -303,7 +303,7 @@
 
                 <li class="social-item">
                   <!-- linkedin -->
-                  <a class="links social-item_link" href="#" >
+                  <a class="links social-item__link" href="#" >
                       <svg class="social-icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-linkedin">
                         </use>
@@ -316,20 +316,20 @@
 
             <!-- 03  Микола Тарасов -->
 
-          <li class="team-list_card">
+          <li class="team-list__item">
             <img class="photo-pisition"
               src="./images/photo-03.jpg"
               alt="Marketing manager portrait"
               width="270"
             />
-            <div class="position-box">
+            <div class="position-wrapper">
               <h3 class="name-position">Микола Тарасов</h3>
             <p class="position">Marketing</p>
 
             <ul class="social-set list">
                 <li class="social-item">
                   <!-- instagram -->
-                  <a class="links social-item_link" href="#" >
+                  <a class="links social-item__link" href="#" >
                       <svg class="social-icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-instagram">
                         </use>
@@ -339,7 +339,7 @@
 
                 <li class="social-item">
                   <!-- twitter -->
-                  <a class="links social-item_link" href="#" >
+                  <a class="links social-item__link" href="#" >
                       <svg class="social-icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-twitter">
                         </use>
@@ -349,7 +349,7 @@
 
                 <li class="social-item">
                   <!-- facebook -->
-                  <a class="links social-item_link" href="#" >
+                  <a class="links social-item__link" href="#" >
                       <svg class="social-icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-facebook">
                         </use>
@@ -359,7 +359,7 @@
 
                 <li class="social-item">
                   <!-- linkedin -->
-                  <a class="links social-item_link" href="#" >
+                  <a class="links social-item__link" href="#" >
                       <svg class="social-icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-linkedin">
                         </use>
@@ -372,20 +372,20 @@
 
             <!-- 04 Михайло Єрмаков -->
 
-          <li class="team-list_card">
+          <li class="team-list__item">
             <img class="photo-pisition"
               src="./images/photo-04.jpg"
               alt="UI Designer portrait"
               width="270"
             />
-           <div class="position-box">
+           <div class="position-wrapper">
              <h3 class="name-position">Михайло Єрмаков</h3>
             <p class="position">UI Designer</p>
 
             <ul class="social-set list">
                 <li class="social-item">
                   <!-- instagram -->
-                  <a class="links social-item_link" href="#" >
+                  <a class="links social-item__link" href="#" >
                       <svg class="social-icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-instagram">
                         </use>
@@ -395,7 +395,7 @@
 
                 <li class="social-item">
                   <!-- twitter -->
-                  <a class="links social-item_link" href="#" >
+                  <a class="links social-item__link" href="#" >
                       <svg class="social-icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-twitter">
                         </use>
@@ -405,7 +405,7 @@
 
                 <li class="social-item">
                   <!-- facebook -->
-                  <a class="links social-item_link" href="#" >
+                  <a class="links social-item__link" href="#" >
                       <svg class="social-icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-facebook">
                         </use>
@@ -415,7 +415,7 @@
 
                 <li class="social-item">
                   <!-- linkedin -->
-                  <a class="links social-item_link" href="#" >
+                  <a class="links social-item__link" href="#" >
                       <svg class="social-icon" width="20" height="20">
                         <use href="./images/icons.svg#icon-linkedin">
                         </use>
@@ -551,7 +551,7 @@
                 <!-- instagram -->
                 
                 <div class="instagram-wraper">
-                  <a class="links social-item_link instagram" href="#" >
+                  <a class="links social-item__link instagram" href="#" >
                     <svg class="social-icon" width="20" height="20">
                       <use href="./images/icons.svg#icon-instagram">
                       </use>
@@ -565,7 +565,7 @@
 
                 <!-- twitter -->
                 
-                <a class="links social-item_link twitter" href="#" >
+                <a class="links social-item__link twitter" href="#" >
                     <svg class="social-icon" width="20" height="20">
                       <use href="./images/icons.svg#icon-twitter">
                       </use>
@@ -578,7 +578,7 @@
                 <!-- facebook -->
 
                 <div class="facebook-wraper">
-                  <a class="links social-item_link facebook" href="#" >
+                  <a class="links social-item__link facebook" href="#" >
                     <svg class="social-icon" width="25" height="25">
                       <use href="./images/icons.svg#icon-facebook">
                       </use>
@@ -592,7 +592,7 @@
 
                 <!-- Youtube -->
                 
-                <a class="links social-item_link youtube" href="#" >
+                <a class="links social-item__link youtube" href="#" >
                     <svg class="social-icon" width="25" height="25">
                       <use href="./images/icons.svg#icon-youtube">
                       </use>
@@ -605,7 +605,7 @@
 
                 <!-- linkedin -->
                 
-                <a class="links social-item_link linkedin" href="#" >
+                <a class="links social-item__link linkedin" href="#" >
                     <svg class="social-icon" width="20" height="20">
                       <use href="./images/icons.svg#icon-linkedin">
                       </use>

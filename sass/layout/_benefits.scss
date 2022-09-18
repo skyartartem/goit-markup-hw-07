@@ -1,14 +1,14 @@
-.sec-benefits {
+.benefits {
   padding-bottom: 0px;
 }
 
 
-.sec-benefits__list {
+.benefits__list {
   display: flex;
   justify-content: space-between;
 }
 
-.sec-benefits__title-item {
+.benefits__title {
   color: var(--secondary-text-color);
   font-size: 1em;
   line-height: 1.14;
@@ -16,7 +16,7 @@
   margin-bottom: 10px;
 }
 
-.sec-benefits__card {
+.benefits__item {
   width: calc( ( 100% - 90px ) / 4 );
   
   &::before {

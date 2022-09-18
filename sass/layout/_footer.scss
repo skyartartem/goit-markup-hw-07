@@ -84,7 +84,7 @@
 }
 
 .footer {
-  .social-item_link {
+  .social-item__link {
     display: flex;
     height: 44px;
     width: 44px;
@@ -98,7 +98,7 @@
 
 
 .footer{
-  .social-item_link{
+  .social-item__link{
     &:hover,
     &:focus {
       background-color: rgb(29 155 240);  

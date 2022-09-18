@@ -1,8 +1,8 @@
-.sec-team {
+.team {
   background-color: #f5f4fa;
 }
 
-.team-list_card {
+.team-list__item {
   background-color: var(--main-bgrnd-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
     0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -16,7 +16,7 @@
   
 }
 
-.position-box {
+.position-wrapper {
   padding-bottom: 30px;
   padding-top: 30px;
 }
@@ -43,7 +43,7 @@
  fill: currentColor;
 }
 
-.social-item_link {
+.social-item__link {
   color: #afb1b8;
   display: flex;
   height: 44px;

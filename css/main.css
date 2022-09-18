@@ -134,7 +134,7 @@ button {
   align-items: center;
 }
 
-.site-nav_link.current::after {
+.menu-list__link.current::after {
   position: absolute;
   display: block;
   content: "";
@@ -153,15 +153,15 @@ button {
   margin-right: 93px;
 }
 
-.site-nav {
+.menu-list {
   display: flex;
 }
 
-.site-nav_item:not(:last-child) {
+.menu-list__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.site-nav_link {
+.menu-list__link {
   position: relative;
   display: block;
   padding-top: 32px;
@@ -172,12 +172,12 @@ button {
   color: var(--secondary-text-color);
   transition: color var(--duration-cubic), text-shadow var(--duration-cubic);
 }
-.site-nav_link:hover, .site-nav_link:focus {
+.menu-list__link:hover, .menu-list__link:focus {
   color: var(--accent-color);
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.site-nav_link.current {
+.menu-list__link.current {
   color: var(--accent-color);
 }
 
@@ -185,7 +185,7 @@ button {
 .contact-list {
   display: flex;
 }
-.contact-list .contact-list_item:not(:last-child) {
+.contact-list .contact-list__item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -242,16 +242,16 @@ button {
   text-transform: uppercase;
 }
 
-.sec-benefits {
+.benefits {
   padding-bottom: 0px;
 }
 
-.sec-benefits__list {
+.benefits__list {
   display: flex;
   justify-content: space-between;
 }
 
-.sec-benefits__title-item {
+.benefits__title {
   color: var(--secondary-text-color);
   font-size: 1em;
   line-height: 1.14;
@@ -259,10 +259,10 @@ button {
   margin-bottom: 10px;
 }
 
-.sec-benefits__card {
+.benefits__item {
   width: calc((100% - 90px) / 4);
 }
-.sec-benefits__card::before {
+.benefits__item::before {
   content: "";
   display: block;
   margin-bottom: 30px;
@@ -290,17 +290,17 @@ button {
   background-image: url(../images/svg/astronaut.svg);
 }
 
-.what-we-do {
+.what-we-do-list {
   display: flex;
   justify-content: space-between;
 }
 
-.what-we-do_box {
+.what-we-do-list__item {
   position: relative;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.what-we-do_description {
+.what-we-do-list__description {
   position: absolute;
   display: block;
   text-align: center;
@@ -315,11 +315,11 @@ button {
   text-transform: uppercase;
 }
 
-.sec-team {
+.team {
   background-color: #f5f4fa;
 }
 
-.team-list_card {
+.team-list__item {
   background-color: var(--main-bgrnd-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -330,7 +330,7 @@ button {
   justify-content: space-between;
 }
 
-.position-box {
+.position-wrapper {
   padding-bottom: 30px;
   padding-top: 30px;
 }
@@ -355,7 +355,7 @@ button {
   fill: currentColor;
 }
 
-.social-item_link {
+.social-item__link {
   color: #afb1b8;
   display: flex;
   height: 44px;
@@ -365,7 +365,7 @@ button {
   align-items: center;
   transition: color var(--duration-cubic), background-color var(--duration-cubic);
 }
-.social-item_link:hover, .social-item_link:focus {
+.social-item__link:hover, .social-item__link:focus {
   background-color: var(--accent-color);
   color: var(--text-color-on-drk-bgrd);
 }
@@ -468,7 +468,7 @@ button {
   gap: 10px;
 }
 
-.footer .social-item_link {
+.footer .social-item__link {
   display: flex;
   height: 44px;
   width: 44px;
@@ -479,7 +479,7 @@ button {
   transition: background-color var(--duration-cubic);
 }
 
-.footer .social-item_link:hover, .footer .social-item_link:focus {
+.footer .social-item__link:hover, .footer .social-item__link:focus {
   background-color: rgb(29, 155, 240);
   /* колір твітера (як що прибрати нижні ховери і поставити колір акцент буде по макету*/
 }
@@ -553,6 +553,110 @@ button {
 
 .icon-send {
   margin-left: 10px;
+}
+
+/* Стилізація кнопок вибору категорії */
+.set-categories {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.set-categories_item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.categories-but {
+  border: none;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  color: var(--secondary-text-color);
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  padding: 6px 22px;
+  transition: color var(--duration-cubic), background-color var(--duration-cubic), box-shadow var(--duration-cubic);
+}
+.categories-but.current {
+  color: var(--text-color-on-drk-bgrd);
+  background-color: var(--accent-color);
+}
+.categories-but:hover, .categories-but:focus {
+  color: var(--text-color-on-drk-bgrd);
+  background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* ========= Стилізація галереї ========== */
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.project-card {
+  margin: 15px;
+}
+
+.img-project {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card_link {
+  display: block;
+  border-radius: 0px 0px 4px 4px;
+  transition: box-shadow var(--duration-cubic);
+}
+.project-card_link:hover, .project-card_link:focus {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.project-card_link:hover .hoverer-overlay, .project-card_link:focus .hoverer-overlay {
+  transform: translateY(0%);
+}
+
+.hoverer-overlay {
+  position: absolute;
+  background-color: var(--accent-color);
+  opacity: 0.9;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  transform: translateY(100%);
+  transition: transform var(--duration-cubic);
+}
+
+.overlay-text {
+  display: block;
+  color: var(--text-color-on-drk-bgrd);
+  font-size: 18px;
+  line-height: 1.56;
+  padding: 63px 24px;
+}
+
+.project-card_box {
+  border-left: 1px solid var(--cards-border-color);
+  border-right: 1px solid var(--cards-border-color);
+  border-bottom: 1px solid var(--cards-border-color);
+  padding: 20px 24px;
+  border-radius: 0px 0px 4px 4px;
+}
+
+.name-project {
+  color: var(--secondary-text-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+
+.project {
+  color: var(--primary-text-color);
+  font-size: 16px;
+  line-height: 1.88;
 }
 
 /* Стилізація бекдропа модального вікна */
