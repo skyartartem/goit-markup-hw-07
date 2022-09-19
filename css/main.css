@@ -124,6 +124,182 @@ button {
   margin-bottom: 50px;
 }
 
+/* Стилізація бекдропа модального вікна */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 1;
+  transition: opacity var(--duration-cubic);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Стилізація модального вікна */
+.modal-window {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  background: var(--main-bgrnd-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: transform var(--duration-cubic);
+}
+.backdrop.is-hidden .modal-window {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+.close-but {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 8px;
+  right: 8px;
+  background-color: var(--main-bgrnd-color);
+  color: var(--secondary-text-color);
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.icon-cros {
+  transition: fill var(--duration-cubic);
+}
+.close-but:hover .icon-cros, .close-but:focus .icon-cros {
+  fill: var(--accent-color);
+}
+
+/* Стилізація форми модального вікна */
+.modal-form {
+  width: 528px;
+  /* height: 581px; */
+  padding: 40px;
+}
+
+.modal-form-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: var(--secondary-text-color);
+  margin-bottom: 12px;
+}
+
+.label-user {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.01em;
+  color: #757575;
+}
+
+.input-user {
+  display: block;
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px 42px;
+  font-size: 12px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.01em;
+  transition: border var(--duration-cubic);
+}
+.input-user:focus {
+  border: 1px solid var(--accent-color);
+  outline: none;
+}
+
+.icons {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+  pointer-events: none;
+  transition: fill var(--duration-cubic);
+}
+.input-user:focus + .icons {
+  fill: var(--accent-color);
+}
+
+.input-wraper {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.input-user-coment {
+  display: block;
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-bottom: 20px;
+  resize: none;
+  padding: 12px 16px;
+  font-size: 12px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.01em;
+  transition: border var(--duration-cubic);
+}
+.input-user-coment::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+.input-user-coment:focus {
+  border: 1px solid var(--accent-color);
+  outline: none;
+}
+
+.chek-box-wrap {
+  padding: 0;
+  border: none;
+  margin-bottom: 30px;
+}
+
+.user-confirm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contract-link {
+  color: var(--accent-color);
+  transition: text-shadow var(--duration-cubic);
+}
+.contract-link:hover, .contract-link:focus {
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+.custom-check {
+  width: 16px;
+  height: 15px;
+  border: 2px solid rgb(33, 33, 33);
+  border-radius: 2px;
+  margin-right: 8px;
+}
+.check-box:checked + .custom-check {
+  background-color: var(--accent-color);
+  border: none;
+}
+.check-box:focus + .custom-check {
+  border-color: var(--accent-color);
+}
+
+.send-form-button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Стилізація капелюха */
 .header {
   border-bottom: 1px solid #ECECEC;
@@ -657,180 +833,4 @@ button {
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.88;
-}
-
-/* Стилізація бекдропа модального вікна */
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  opacity: 1;
-  transition: opacity var(--duration-cubic);
-}
-
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
-/* Стилізація модального вікна */
-.modal-window {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  background: var(--main-bgrnd-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  transition: transform var(--duration-cubic);
-}
-.backdrop.is-hidden .modal-window {
-  transform: translate(-50%, -50%) scale(1.5);
-}
-
-.close-but {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 8px;
-  right: 8px;
-  background-color: var(--main-bgrnd-color);
-  color: var(--secondary-text-color);
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.icon-cros {
-  transition: fill var(--duration-cubic);
-}
-.close-but:hover .icon-cros, .close-but:focus .icon-cros {
-  fill: var(--accent-color);
-}
-
-/* Стилізація форми модального вікна */
-.modal-form {
-  width: 528px;
-  /* height: 581px; */
-  padding: 40px;
-}
-
-.modal-form-title {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
-  color: var(--secondary-text-color);
-  margin-bottom: 12px;
-}
-
-.label-user {
-  display: block;
-  margin-bottom: 4px;
-  font-size: 12px;
-  line-height: 1.1666666667;
-  letter-spacing: 0.01em;
-  color: #757575;
-}
-
-.input-user {
-  display: block;
-  width: 100%;
-  height: 40px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  padding: 12px 42px;
-  font-size: 12px;
-  line-height: 1.1666666667;
-  letter-spacing: 0.01em;
-  transition: border var(--duration-cubic);
-}
-.input-user:focus {
-  border: 1px solid var(--accent-color);
-  outline: none;
-}
-
-.icons {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 12px;
-  pointer-events: none;
-  transition: fill var(--duration-cubic);
-}
-.input-user:focus + .icons {
-  fill: var(--accent-color);
-}
-
-.input-wraper {
-  position: relative;
-  margin-bottom: 10px;
-}
-
-.input-user-coment {
-  display: block;
-  width: 100%;
-  height: 120px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  margin-bottom: 20px;
-  resize: none;
-  padding: 12px 16px;
-  font-size: 12px;
-  line-height: 1.1666666667;
-  letter-spacing: 0.01em;
-  transition: border var(--duration-cubic);
-}
-.input-user-coment::placeholder {
-  color: rgba(117, 117, 117, 0.5);
-}
-.input-user-coment:focus {
-  border: 1px solid var(--accent-color);
-  outline: none;
-}
-
-.chek-box-wrap {
-  padding: 0;
-  border: none;
-  margin-bottom: 30px;
-}
-
-.user-confirm {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.contract-link {
-  color: var(--accent-color);
-  transition: text-shadow var(--duration-cubic);
-}
-.contract-link:hover, .contract-link:focus {
-  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-}
-
-.custom-check {
-  width: 16px;
-  height: 15px;
-  border: 2px solid rgb(33, 33, 33);
-  border-radius: 2px;
-  margin-right: 8px;
-}
-.check-box:checked + .custom-check {
-  background-color: var(--accent-color);
-  border: none;
-}
-.check-box:focus + .custom-check {
-  border-color: var(--accent-color);
-}
-
-.send-form-button {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }/*# sourceMappingURL=main.css.map */
